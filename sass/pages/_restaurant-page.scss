@@ -1,0 +1,70 @@
+.main--restaurant-page {
+   
+    img {
+        width: 100%;
+        object-fit: cover;
+    }
+    
+    &__menu-section {
+        margin-top: -4rem;
+        padding: 2rem 1rem;
+        background-color: $color-background-default;
+        border-radius: 3rem 3rem 0 0;
+        overflow: hidden;
+        z-index: 2;
+        position:relative;
+    }
+}
+
+.menu-section__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.restaurant-page__like-icon {
+    margin-right: 1rem;
+    font-size: 1.5rem;
+}
+
+.course__border-bottom {
+    height: 3px;
+    width: 50px;
+    margin-top: 5px;
+    background: $color-tertiary;
+}
+
+.course__type {
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.course__type,
+.card__infos__texts__title {
+    font-size: 1.3rem;
+}
+
+.card__price {
+    align-self: flex-end;
+    font-weight: 700;
+}
+
+.card__check {
+    display: none;
+    align-items: center;
+    background: $color-tertiary;
+    padding: 0 1.2rem;
+
+    &__icon {
+        padding: .2rem;
+        border-radius: 50%;
+        overflow: hidden;
+        background: white;
+        color: $color-tertiary;
+    }
+}
+
+.card:hover .card__check {
+    display: flex;
+}
+

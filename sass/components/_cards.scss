@@ -1,0 +1,24 @@
+.card,
+.card__infos {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.card {
+    margin: 1rem 0;
+    background: white;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.card__infos {
+    flex-grow: 1;
+    padding: .7rem 1.2rem;
+}
+
+.card__link {
+    width: 100%;
+}
+

@@ -1,0 +1,12 @@
+.footer {
+    padding: 1.5rem 1rem;
+    background: $color-background-darkest;
+
+    &__brand-name {
+        font-family: Shrikhand, Arial, Helvetica, sans-serif;
+    }
+}
+
+.footer * {
+    color: white;
+}
