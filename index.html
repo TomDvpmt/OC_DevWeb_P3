@@ -5,9 +5,91 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./public/css/style.css">
+    <script src="https://kit.fontawesome.com/81b6c8a65c.js" crossorigin="anonymous"></script>
     <title>Ohmyfood!</title>
 </head>
 <body>
-    <h1>Test</h1>
+    <header class="header header--home">
+        <img src="./public/img/logo/ohmyfood.png" alt="logo Ohmyfood">
+    </header>
+    <main class="main main--home">
+        <section class="home__location">
+            <i></i>
+            <p>Paris, Belleville</p>
+        </section>
+        <section class="home__book">
+            <h1 class="home__book__main-heading">Réservez le menu qui vous convient</h1>
+            <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+            <a href="#notice">Explorez nos restaurants</a>
+        </section>
+        <section id="notice" class="home__notice">
+            <h2>Fonctionnement</h2>
+            <ul class="notice__list">
+                <li><span class="notice__list__number">1</span><i class="notice__list__icon"></i><span class="notice__list__text">Choisissez un restaurant</span></li>
+                <li><span class="notice__list__number">2</span><i class="notice__list__icon"></i><span class="notice__list__text">Composez votre menu</span></li>
+                <li><span class="notice__list__number">3</span><i class="notice__list__icon"></i><span class="notice__list__text">Dégustez un restaurant</span></li>
+            </ul>
+        </section>
+        <section class="home__restaurants">
+            <h2>Restaurants</h2>
+            <article class="home__restaurants__card">
+                <img src="" alt="">
+                <p class="new">Nouveau</p>
+                <div class="card__infos">
+                    <div class="card__infos__texts">
+                        <h3>La palette du goût</h3>
+                        <p>Ménilmontant</p>
+                    </div>
+                    <i class="fa-regular fa-heart card__infos__like-icon"></i>
+                </div>
+            </article>
+            <article class="home__restaurants__card">
+                <img src="" alt="">
+                <p class="new">Nouveau</p>
+                <div class="card__infos">
+                    <div class="card__infos__texts">
+                        <h3>La note enchantée</h3>
+                        <p>Charonne</p>
+                    </div>
+                    <i class="fa-regular fa-heart card__infos__like-icon"></i>
+                </div>
+            </article>
+            <article class="home__restaurants__card">
+                <a href="./pages/a_la_francaise.html" class="card__link">
+                    <img src="./public/img/restaurants/a_la_francaise.jpg" alt="restaurant À la française">
+                </a>
+                <div class="card__infos">
+                    <div class="card__infos__texts">
+                        <h3>À la française</h3>
+                        <p>Cité rouge</p>
+                    </div>
+                    <i class="fa-regular fa-heart card__infos__like-icon"></i>
+                </div>
+            </article>
+            <article class="home__restaurants__card">
+                <img src="" alt="">
+                <div class="card__infos">
+                    <div class="card__infos__texts">
+                        <h3>Le délice des sens</h3>
+                        <p>Folie-Méricourt</p>
+                    </div>
+                    <i class="fa-regular fa-heart card__infos__like-icon"></i>
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer class="footer">
+        <img src="./public/img/logo/ohmyfood.png" alt="logo Ohmyfood">
+        <ul class="footer__list">
+            <li>
+                <i class="fa-solid fa-utensils footer__list__icon"></i><span>Proposer un restaurant</span>
+            </li>
+            <li>
+                <i class="fa-solid fa-handshake-angle footer__list__icon"></i><span>Devenir partenaire</span>
+            </li>
+            <li>Mentions légales</li>
+            <li><a href="mailto:contact@ohmyfood.oc">Contact</a></li>
+        </ul>
+    </footer>
 </body>
 </html>
