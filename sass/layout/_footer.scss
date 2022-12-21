@@ -1,12 +1,32 @@
-.footer {
-    padding: 1.5rem 1rem;
-    background: $color-background-darkest;
-
-    &__brand-name {
-        font-family: Shrikhand, Arial, Helvetica, sans-serif;
-    }
-}
-
 .footer * {
     color: white;
 }
+
+.footer {
+    padding: 1.5rem;
+    background: $color-background-darkest;
+
+    &__brand-name {
+        display: block;
+        margin-bottom: 1rem;
+        font-family: Shrikhand, Arial, Helvetica, sans-serif;
+        font-size: 1.3rem;
+    }
+
+    &__list__item {
+        display: grid;
+        grid-template-columns: 1rem 1fr;
+        align-items: center;
+        gap: .7rem;
+        margin-bottom: .7rem;
+    }
+
+    &__list__item--no-icon {
+        grid-template-columns: 1fr;
+    }
+
+    &__list__icon {
+        font-size: .8rem;
+    }
+}
+

@@ -1,9 +1,13 @@
 $color-default: black;
+$color-default-light: lighten($color-default, 10%);
+$color-default-lighter: lighten($color-default, 30%);
+$color-default-lightest: lighten($color-default, 50%);
 
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 
 $color-background-default: #f7f7f7;
-$color-background-dark: darken($color-background-default, 10%);
-$color-background-darkest: darken($color-background-default, 60%);
+$color-background-dark: darken($color-background-default, 5%);
+$color-background-darker: darken($color-background-default, 20%);
+$color-background-darkest: darken($color-background-default, 70%);

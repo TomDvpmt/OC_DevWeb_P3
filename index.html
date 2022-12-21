@@ -19,17 +19,29 @@
         </section>
         <section class="section section--home section--home__book">
             <h2 class="h2--home">Réservez le menu qui vous convient</h2>
-            <p class="light-text">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+            <p class="lighter-text">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
             <button class="button">
-                <a href="#notice">Explorez nos restaurants</a>
+                <a href="#notice">Explorer nos restaurants</a>
             </button>
         </section>
         <section id="notice" class="section section--home section--home__notice">
             <h2 class="h2--home">Fonctionnement</h2>
             <ul class="notice__list">
-                <li><span class="notice__list__number">1</span><i class="fa-solid fa-mobile-screen-button notice__list__icon"></i><span class="notice__list__text">Choisissez un restaurant</span></li>
-                <li><span class="notice__list__number">2</span><i class="fa-solid fa-list-ul notice__list__icon"></i><span class="notice__list__text">Composez votre menu</span></li>
-                <li><span class="notice__list__number">3</span><i class="fa-solid fa-store notice__list__icon"></i><span class="notice__list__text">Dégustez un restaurant</span></li>
+                <li class="list__item">
+                    <span class="list__item__number">1</span>
+                    <i class="fa-solid fa-mobile-screen-button list__item__icon lightest-text"></i>
+                    <span class="list__item__text">Choisissez un restaurant</span>
+                </li>
+                <li class="list__item">
+                    <span class="list__item__number">2</span>
+                    <i class="fa-solid fa-list-ul list__item__icon lightest-text"></i>
+                    <span class="list__item__text">Composez votre menu</span>
+                </li>
+                <li class="list__item">
+                    <span class="list__item__number">3</span>
+                    <i class="fa-solid fa-store list__item__icon lightest-text"></i>
+                    <span class="list__item__text">Dégustez au restaurant</span>
+                </li>
             </ul>
         </section>
         <section class="section section--home section--home__restaurants">
@@ -37,12 +49,13 @@
             <article class="card card--home">
                 <a href="./pages/la_palette_du_gout.html" class="card__link">
                     <img class="card__img" src="./public/img/restaurants/la_palette_du_gout.jpg" alt="resturant La palette du goût">
+                    <p class="card__new">Nouveau</p>
                 </a>
-                <p class="card__new">Nouveau</p>
+                
                 <div class="card__infos">
                     <div class="card__infos__texts">
                         <h3><a href="./pages/la_palette_du_gout.html" class="card__link">La palette du goût</a></h3>
-                        <p class="light-text">Ménilmontant</p>
+                        <p class="lighter-text">Ménilmontant</p>
                     </div>
                     <i class="fa-regular fa-heart card__infos__like-icon"></i>
                 </div>
@@ -50,12 +63,12 @@
             <article class="card card--home">
                 <a href="./pages/la_note_enchantee.html" class="card__link">
                     <img class="card__img" src="./public/img/restaurants/la_note_enchantee.jpg" alt="restaurant La note enchantée">
+                    <p class="card__new">Nouveau</p>
                 </a>
-                <p class="card__new">Nouveau</p>
                 <div class="card__infos">
                     <div class="card__infos__texts">
                         <h3><a href="./pages/la_note_enchantee.html" class="card__link">La note enchantée</a></h3>
-                        <p class="light-text">Charonne</p>
+                        <p class="lighter-text">Charonne</p>
                     </div>
                     <i class="fa-regular fa-heart card__infos__like-icon"></i>
                 </div>
@@ -67,7 +80,7 @@
                 <div class="card__infos">
                     <div class="card__infos__texts">
                         <h3><a href="./pages/a_la_francaise.html" class="card__link">À la française</a></h3>
-                        <p class="light-text">Cité rouge</p>
+                        <p class="lighter-text">Cité rouge</p>
                     </div>
                     <i class="fa-regular fa-heart card__infos__like-icon"></i>
                 </div>
@@ -79,7 +92,7 @@
                 <div class="card__infos">
                     <div class="card__infos__texts">
                         <h3><a href="./pages/le_delice_des_sens.html" class="card__link">Le délice des sens</a></h3>
-                        <p class="light-text">Folie-Méricourt</p>
+                        <p class="lighter-text">Folie-Méricourt</p>
                     </div>
                     <i class="fa-regular fa-heart card__infos__like-icon"></i>
                 </div>
@@ -87,16 +100,20 @@
         </section>
     </main>
     <footer class="footer">
-        <a class="footer__brand-name" href="/index.html">ohmyfood</a>
+        <a class="footer__brand-name" href="../index.html">ohmyfood</a>
         <ul class="footer__list">
-            <li>
-                <i class="fa-solid fa-utensils footer__list__icon"></i><span>Proposer un restaurant</span>
+            <li class="footer__list__item">
+                <i class="fa-solid fa-utensils footer__list__icon"></i>
+                <span>Proposer un restaurant</span>
             </li>
-            <li>
-                <i class="fa-solid fa-handshake-angle footer__list__icon"></i><span>Devenir partenaire</span>
+            <li class="footer__list__item">
+                <i class="fa-solid fa-handshake-angle footer__list__icon"></i>
+                <span>Devenir partenaire</span>
             </li>
-            <li>Mentions légales</li>
-            <li><a href="mailto:contact@ohmyfood.oc">Contact</a></li>
+            <li class="footer__list__item footer__list__item--no-icon">Mentions légales</li>
+            <li class="footer__list__item footer__list__item--no-icon">
+                <a href="mailto:contact@ohmyfood.oc">Contact</a>
+            </li>
         </ul>
     </footer>
 </body>
