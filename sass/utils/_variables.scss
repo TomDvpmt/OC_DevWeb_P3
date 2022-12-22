@@ -11,3 +11,13 @@ $color-background-default: #f7f7f7;
 $color-background-dark: darken($color-background-default, 5%);
 $color-background-darker: darken($color-background-default, 20%);
 $color-background-darkest: darken($color-background-default, 70%);
+
+
+$breakpoints: (
+    mobile: 400px,
+    mobile-large: 500px,
+    tablet: 700px,
+    tablet-large: 900px,
+    desktop: 1024px,
+    desktop-large: 1440px
+);

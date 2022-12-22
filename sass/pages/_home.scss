@@ -1,3 +1,18 @@
+.responsive-sections-group {
+    max-width: 1440px;
+    margin: 0 auto;
+
+    @include tablet-large {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+    }
+
+    @include desktop-large {
+
+    }
+}
+
 .section--home {
     padding: 3rem 1.5rem;
 
@@ -19,6 +34,25 @@
 
     &__notice {
         background-color: #fff;
+        flex: 1;
+        position: relative;
+
+        .sticky-div {
+            position: sticky;
+            top: 2rem;
+        }
+    }
+
+    &__restaurants {
+        flex: 2;
+        
+        @include tablet-large {
+            background-color: #fff;
+        }
+    }
+
+    h1 {
+        padding-bottom: 1rem;
     }
 }
 
@@ -26,8 +60,18 @@
     padding-bottom: 1rem;
 }
 
+.notice__list {
+    margin: 1.5rem 0;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1.5rem;
+}
+
 .list__item {
-    margin: 1.5rem 1rem;
+    width: 100%;
+    max-width: 405px;
+    margin: 0 1rem 0 2.4rem;
     padding: 1.5rem;
     background: $color-background-default;
     border-radius: 1rem;
@@ -78,5 +122,17 @@
         width: 100%;
         height:15rem;
         object-fit: cover;
+    }
+
+    @include tablet {
+        width: 48%;
+    }
+
+    @include tablet-large {
+        width: 100%;
+    }
+
+    @include desktop {
+        width: 48%;
     }
 }

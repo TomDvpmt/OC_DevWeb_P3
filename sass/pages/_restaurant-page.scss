@@ -1,40 +1,49 @@
-.header--restaurant-page {
-    position: relative;
-
-    &__arrow_link {
-        position: absolute;
-        left: 2rem;
-        font-size: 1.5rem;
-    }
-    
-    &__logo {
-        height: 32px;
-    }
-}
-
 .main--restaurant-page {
-   
+    background: white;
+
+    @include desktop {
+        display: flex;
+        justify-content: space-between;
+        border-radius: 2rem 2rem 0 0;
+        overflow: hidden;
+    }
+
     &__img {
         width: 100%;
         object-fit: cover;
+
+        @include desktop {
+            width: 40%;
+            object-fit:cover;
+        }
     }
     
     &__menu-section {
-        margin-top: -4rem;
+        margin: -4rem auto 0 auto;
         padding: 2rem .8rem;
         background-color: $color-background-default;
         border-radius: 2rem 2rem 0 0;
         overflow: hidden;
         z-index: 2;
         position:relative;
+
+        @include desktop {
+            width: 60%;
+            margin: 0;
+            border-radius: initial;
+        }
     }
 }
 
 .menu-section__heading {
-    padding-bottom: 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.menu-section__course {
+    max-width: 750px;
+    margin: 0 auto;
 }
 
 .main-heading--restaurant-page {
@@ -44,6 +53,10 @@
 .restaurant-page__like-icon {
     margin-right: 1rem;
     font-size: 1.5rem;
+
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 .course__border-bottom {
@@ -53,18 +66,11 @@
     background: $color-tertiary;
 }
 
-.course__type,
-.card__infos__texts__title {
-    font-size: 1.2rem;
-}
-
-.card__infos__texts__title {
-    margin-bottom: .3rem;
-}
-
 .course__type {
+    padding-top: 2rem;
     text-transform: uppercase;
     font-weight: 300;
+    font-size: 1.2rem;
 }
 
 .card__price {
@@ -74,9 +80,6 @@
 
 .card__check {
     display: none;
-    align-items: center;
-    background: $color-tertiary;
-    padding: 0 1.2rem;
 
     &__icon {
         padding: .2rem;
@@ -87,7 +90,31 @@
     }
 }
 
-.card:hover .card__check {
-    display: flex;
+.card--restaurant-page {
+    @include tablet-large {
+        width: 48%;
+    }
+
+    @include desktop {
+        width: 100%;
+    }
+
+    &:hover {
+        .card__check {
+            display: flex;
+            align-items: center;
+            background: $color-tertiary;
+            padding: 0 1.2rem;
+        }
+    
+        .card__check__icon {
+            cursor: pointer;
+        }
+    } 
+}
+
+.card__infos__texts__title {
+    margin-bottom: .3rem;
+    font-size: 1.2rem;
 }
 

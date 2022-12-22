@@ -7,9 +7,14 @@
 
     a {
         display: block;
-        padding: 1rem 3rem;
+        padding: 1rem 2rem;
         color: #fff;
         font-size: 1rem;
         font-weight: 700;
+    }
+
+    &:hover {
+        background: linear-gradient(170deg, lighten($color-secondary, 3%) 0%, lighten($color-primary, 3%) 100%);
+        box-shadow: 3px 6px 10px darken($color-background-darker, 10%);
     }
 }

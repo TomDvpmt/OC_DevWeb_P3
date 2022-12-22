@@ -1,13 +1,26 @@
+.cards {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+
+    @include tablet {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
 .card,
 .card__infos {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: stretch;
+    min-width: 0;
 }
 
 .card {
-    margin: 1rem 0;
     background: white;
     border-radius: 1rem;
     overflow: hidden;
@@ -15,13 +28,23 @@
 
 .card__infos {
     flex-grow: 1;
-    padding: .7rem;
-
+    padding: .6rem;
+    
     &__like-icon {
         font-size: 1.5rem;
 
         &:hover {
             cursor: pointer;
+        }
+    }
+
+    &__texts {
+        min-width: 0;
+
+        > * {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
         }
     }
 }
