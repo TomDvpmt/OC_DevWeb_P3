@@ -18,12 +18,49 @@
     }
 
     &::after {
-        @include pseudo-element;
-        opacity: 0;
+        @include button-pseudo-element;
         background: linear-gradient(170deg, lighten($color-secondary, 3%) 0%, lighten($color-primary, 3%) 100%);
         border-radius: 2rem;
         box-shadow: 3px 6px 10px darken($color-background-darker, 10%);
-        transition: opacity 300ms;
-        z-index: -1;
+        transition-duration: 300ms;
+    }
+}
+
+.like-button { // ANIMATION A AMELIORER
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    overflow: hidden;
+    font-size: 1.5rem;
+
+    .fa-heart { 
+        padding: 1px;
+        grid-column: 1;
+        grid-row: 1;
+        transition: all 300ms;
+    }
+
+    &__empty-icon {
+        opacity: 1;
+    }
+
+    &__filled-icon {
+        background: linear-gradient(170deg, lighten($color-primary, 3%) 0%, lighten($color-secondary, 3%) 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        transform: scale(0);
+    }
+
+    &:hover {
+        cursor: pointer;
+            
+        .like-button__filled-icon {
+            transform: scaleY(1);
+        }
+
+        .like-button__empty-icon {
+            opacity: 0;
+        }
     }
 }

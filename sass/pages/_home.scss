@@ -109,12 +109,10 @@
     }
 
     &::after {
-        @include pseudo-element;
-        z-index: -1;
+        @include button-pseudo-element;
         background: lighten($color-primary, 36%);
         border-radius: 1rem;
-        opacity: 0;
-        transition: opacity 200ms;
+        transition-duration: 200ms;
     }
 }
 

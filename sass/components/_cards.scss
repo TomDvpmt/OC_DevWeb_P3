@@ -26,17 +26,13 @@
     overflow: hidden;
 }
 
+.card__link {
+    width: 100%;
+}
+
 .card__infos {
     flex-grow: 1;
     padding: .6rem;
-    
-    &__like-icon {
-        font-size: 1.5rem;
-
-        &:hover {
-            cursor: pointer;
-        }
-    }
 
     &__texts {
         min-width: 0;
@@ -47,9 +43,5 @@
             overflow: hidden;
         }
     }
-}
-
-.card__link {
-    width: 100%;
 }
 

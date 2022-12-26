@@ -50,9 +50,8 @@
     font-size: 2rem;
 }
 
-.restaurant-page__like-icon {
+.like-button--restaurant-page {
     margin-right: 1rem;
-    font-size: 1.5rem;
 
     &:hover {
         cursor: pointer;
@@ -79,7 +78,7 @@
 }
 
 .card__check {
-    width: 0; // ANIMATION A CHANGER POUR PERFORMANCES
+    width: 0; // ANIMATION WIDTH => A CHANGER POUR PERFORMANCES
     background: $color-tertiary;
     display: flex;
     align-items: center;
@@ -99,12 +98,38 @@
 }
 
 .card--restaurant-page {
-    @include tablet-large {
-        width: 48%;
+
+    transform: translateY(0);
+    opacity: 1;
+    animation: menu-reveal 1000ms;
+    animation-fill-mode: backwards;
+
+    @keyframes menu-reveal {
+        0% {
+            transform: translateY(100%);
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 
-    @include desktop {
-        width: 100%;
+    &:nth-child(1) {
+        animation-delay: $card-animation-delay;
+    }
+    
+    &:nth-child(2) {
+        animation-delay: $card-animation-delay*2;
+    }
+    
+    &:nth-child(3) {
+        animation-delay: $card-animation-delay*3;
+    }
+
+    &:nth-child(4) {
+        animation-delay: $card-animation-delay*4;
     }
 
     &:hover {
@@ -118,6 +143,14 @@
             transform: rotate(360deg);
         }
     } 
+
+    @include tablet-large {
+        width: 48%;
+    }
+
+    @include desktop {
+        width: 100%;
+    }
 }
 
 .card__infos__texts__title {
