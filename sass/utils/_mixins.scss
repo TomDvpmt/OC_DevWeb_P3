@@ -1,3 +1,5 @@
+/****************************** Media queries *******************************/
+
 @mixin mobile {
     @media screen and (min-width: map-get($breakpoints, mobile)) {
         @content;
@@ -32,4 +34,16 @@
     @media screen and (min-width: map-get($breakpoints, desktop-large)) {
         @content;
     }
+}
+
+
+/********************************** Animations ********************************/
+
+@mixin pseudo-element {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }

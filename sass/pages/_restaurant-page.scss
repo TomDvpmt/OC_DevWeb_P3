@@ -4,8 +4,6 @@
     @include desktop {
         display: flex;
         justify-content: space-between;
-        border-radius: 2rem 2rem 0 0;
-        overflow: hidden;
     }
 
     &__img {
@@ -29,21 +27,23 @@
 
         @include desktop {
             width: 60%;
+            padding: 2rem;
             margin: 0;
             border-radius: initial;
         }
     }
 }
 
+.menu-section__course,
+.menu-section__heading {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
 .menu-section__heading {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.menu-section__course {
-    max-width: 750px;
-    margin: 0 auto;
 }
 
 .main-heading--restaurant-page {
@@ -79,7 +79,11 @@
 }
 
 .card__check {
-    display: none;
+    width: 0; // ANIMATION A CHANGER POUR PERFORMANCES
+    background: $color-tertiary;
+    display: flex;
+    align-items: center;
+    transition: all 300ms;
 
     &__icon {
         padding: .2rem;
@@ -88,6 +92,10 @@
         background: white;
         color: $color-tertiary;
     }
+}
+
+.card__check__icon {
+    transition: transform 300ms;
 }
 
 .card--restaurant-page {
@@ -101,14 +109,13 @@
 
     &:hover {
         .card__check {
-            display: flex;
-            align-items: center;
-            background: $color-tertiary;
-            padding: 0 1.2rem;
+            width: initial; // ANIMATION A CHANGER POUR PERFORMANCES
+            padding: 0 1.2rem; // ANIMATION A CHANGER POUR PERFORMANCES
         }
     
         .card__check__icon {
             cursor: pointer;
+            transform: rotate(360deg);
         }
     } 
 }
