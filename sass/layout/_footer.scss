@@ -13,7 +13,7 @@
         font-size: 1.3rem;
     }
 
-    &__list__item {
+    &__notice__list__item {
         display: grid;
         grid-template-columns: 1rem 1fr;
         align-items: center;
@@ -21,7 +21,7 @@
         margin-bottom: .7rem;
     }
 
-    &__list__item--no-icon {
+    &__notice__list__item--no-icon {
         grid-template-columns: 1fr;
     }
 

@@ -2,7 +2,7 @@
     box-shadow: 0 3px 5px $color-background-darker;
 }
 
-.responsive-sections-group {
+.main--home__sections-group {
     max-width: 1440px;
     margin: 0 auto;
 
@@ -15,6 +15,14 @@
     @include desktop-large {
 
     }
+}
+
+.h1--home {
+    padding-bottom: 1rem;
+}
+
+.h2--home {
+    padding-bottom: 1rem;
 }
 
 .section--home {
@@ -41,8 +49,18 @@
         position: relative;
 
         .sticky-div {
-            position: sticky;
-            top: 2rem;
+            @include tablet-large {
+                position: sticky;
+                top: 2rem;
+            }   
+        }
+        
+        &__list {
+            margin: 1.5rem 0;
+            display: flex; 
+            flex-direction: column;
+            align-items: center;
+            row-gap: 1.5rem;
         }
     }
 
@@ -53,25 +71,9 @@
             background-color: #fff;
         }
     }
-
-    h1 {
-        padding-bottom: 1rem;
-    }
 }
 
-.h2--home {
-    padding-bottom: 1rem;
-}
-
-.notice__list {
-    margin: 1.5rem 0;
-    display: flex; 
-    flex-direction: column;
-    align-items: center;
-    row-gap: 1.5rem;
-}
-
-.list__item {
+.notice__list__item {
     width: 100%;
     max-width: 405px;
     margin: 0 1rem 0 2.4rem;
@@ -103,7 +105,7 @@
             opacity: 1;
         }
 
-        .list__item__icon {
+        .notice__list__item__icon {
             color: $color-primary;
         }
     }
@@ -120,7 +122,7 @@
     position: relative;
     flex-direction: column;
 
-    .card__new {
+    &__new {
         position: absolute;
         top: 1rem;
         right: 1rem;
@@ -133,7 +135,7 @@
         color: darken($color-tertiary, 40%);
     }
 
-    .card__img {
+    &__img {
         width: 100%;
         height:15rem;
         object-fit: cover;

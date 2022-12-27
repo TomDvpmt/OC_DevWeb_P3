@@ -34,71 +34,50 @@
     }
 }
 
-.menu-section__course,
-.menu-section__heading {
+.menu-section__heading,
+.menu-section__course {
     max-width: 750px;
     margin: 0 auto;
 }
 
-.menu-section__heading {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+.menu-section {
+    &__heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
-.main-heading--restaurant-page {
-    font-size: 2rem;
-}
-
-.like-button--restaurant-page {
-    margin-right: 1rem;
-
-    &:hover {
-        cursor: pointer;
+        &__title {
+            font-size: 2rem;
+            font-family: Shrikhand, Arial, Helvetica, sans-serif;
+            font-weight: normal;
+        }
     }
-}
 
-.course__border-bottom {
-    height: 3px;
-    width: 50px;
-    margin-top: 5px;
-    background: $color-tertiary;
-}
+    &__like-button {
+        margin-right: 1rem;
 
-.course__type {
-    padding-top: 2rem;
-    text-transform: uppercase;
-    font-weight: 300;
-    font-size: 1.2rem;
-}
-
-.card__price {
-    align-self: flex-end;
-    font-weight: 700;
-}
-
-.card__check {
-    width: 0; // ANIMATION WIDTH => A CHANGER POUR PERFORMANCES
-    background: $color-tertiary;
-    display: flex;
-    align-items: center;
-    transition: all 300ms;
-
-    &__icon {
-        padding: .2rem;
-        border-radius: 50%;
-        overflow: hidden;
-        background: white;
-        color: $color-tertiary;
+        &:hover {
+            cursor: pointer;
+        }
     }
-}
 
-.card__check__icon {
-    transition: transform 300ms;
+    &__course__type {
+        padding-top: 2rem;
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 1.2rem;
+    }
+
+    &__course__border-bottom {
+        display: block;
+        height: 3px;
+        width: 50px;
+        margin-top: 5px;
+        background: $color-tertiary;
+    }
 }
 
 .card--restaurant-page {
-
     transform: translateY(0);
     opacity: 1;
     animation: menu-reveal 1000ms;
@@ -133,12 +112,12 @@
     }
 
     &:hover {
-        .card__check {
+        .card--restaurant-page__check {
             width: initial; // ANIMATION A CHANGER POUR PERFORMANCES
             padding: 0 1.2rem; // ANIMATION A CHANGER POUR PERFORMANCES
         }
     
-        .card__check__icon {
+        .card--restaurant-page__check__icon {
             cursor: pointer;
             transform: rotate(360deg);
         }
@@ -151,10 +130,33 @@
     @include desktop {
         width: 100%;
     }
-}
 
-.card__infos__texts__title {
-    margin-bottom: .3rem;
-    font-size: 1.2rem;
+    &__infos__texts__title {
+        margin-bottom: .3rem;
+        font-size: 1.2rem;
+    }
+    
+    &__infos__price {
+        margin-left: 5px;
+        align-self: flex-end;
+        font-weight: 700;
+    }
+
+    &__check {
+        width: 0; // ANIMATION WIDTH => A CHANGER POUR PERFORMANCES
+        background: $color-tertiary;
+        display: flex;
+        align-items: center;
+        transition: all 300ms;
+
+        &__icon {
+            padding: .2rem;
+            border-radius: 50%;
+            overflow: hidden;
+            background: white;
+            color: $color-tertiary;
+            transition: transform 300ms;
+        }
+    }
 }
 

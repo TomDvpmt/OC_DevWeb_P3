@@ -24,23 +24,23 @@
     background: white;
     border-radius: 1rem;
     overflow: hidden;
-}
 
-.card__link {
-    width: 100%;
-}
+    &__link {
+        width: 100%;
+    }
 
-.card__infos {
-    flex-grow: 1;
-    padding: .6rem;
+    &__infos {
+        flex-grow: 1;
+        padding: .6rem;
 
-    &__texts {
-        min-width: 0;
+        &__texts {
+            min-width: 0;
 
-        > * {
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            overflow: hidden;
+            > * {
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
         }
     }
 }
