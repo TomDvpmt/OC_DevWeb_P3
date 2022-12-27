@@ -14,15 +14,14 @@
     }
 
     &__notice__list__item {
-        display: grid;
         grid-template-columns: 1rem 1fr;
         align-items: center;
         gap: .7rem;
         margin-bottom: .7rem;
-    }
 
-    &__notice__list__item--no-icon {
-        grid-template-columns: 1fr;
+        &--no-icon {
+            grid-template-columns: 1fr;
+        }
     }
 
     &__list__icon {

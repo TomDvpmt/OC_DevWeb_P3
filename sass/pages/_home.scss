@@ -31,7 +31,6 @@
     &__location {
         padding: 1.2rem 1rem;
         background: $color-background-dark;
-        display: flex;
         justify-content: center;
         column-gap: 1rem;
         align-items: center; 
@@ -82,7 +81,6 @@
     border-radius: 1rem;
     position: relative;
     z-index: 1;
-    display: flex;
     align-items: center;
     column-gap: 1rem;
 

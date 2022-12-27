@@ -42,7 +42,6 @@
 
 .menu-section {
     &__heading {
-        display: flex;
         justify-content: space-between;
         align-items: center;
 
@@ -79,14 +78,13 @@
 
 .card--restaurant-page {
     transform: translateY(0);
-    opacity: 1;
+    opacity: 0;
     animation: menu-reveal 1000ms;
-    animation-fill-mode: backwards;
+    animation-fill-mode: forwards;
 
     @keyframes menu-reveal {
         0% {
             transform: translateY(100%);
-            opacity: 0;
         }
 
         100% {
@@ -95,30 +93,21 @@
         }
     }
 
-    &:nth-child(1) {
-        animation-delay: $card-animation-delay;
-    }
-    
-    &:nth-child(2) {
-        animation-delay: $card-animation-delay*2;
-    }
-    
-    &:nth-child(3) {
-        animation-delay: $card-animation-delay*3;
-    }
-
-    &:nth-child(4) {
-        animation-delay: $card-animation-delay*4;
+    @for $i from 1 through 4 {
+        &:nth-child(#{$i}) {
+            animation-delay: $card-animation-delay * $i;
+        }
     }
 
     &:hover {
         .card--restaurant-page__check {
             width: initial; // ANIMATION A CHANGER POUR PERFORMANCES
             padding: 0 1.2rem; // ANIMATION A CHANGER POUR PERFORMANCES
+            cursor: pointer;
         }
     
         .card--restaurant-page__check__icon {
-            cursor: pointer;
+            
             transform: rotate(360deg);
         }
     } 
@@ -145,7 +134,6 @@
     &__check {
         width: 0; // ANIMATION WIDTH => A CHANGER POUR PERFORMANCES
         background: $color-tertiary;
-        display: flex;
         align-items: center;
         transition: all 300ms;
 

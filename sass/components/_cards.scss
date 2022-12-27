@@ -1,6 +1,5 @@
 .cards {
     margin-top: 1.5rem;
-    display: flex;
     flex-direction: column;
     row-gap: 2rem;
 
@@ -14,7 +13,6 @@
 .card,
 .card__infos {
     width: 100%;
-    display: flex;
     justify-content: space-between;
     align-items: stretch;
     min-width: 0;

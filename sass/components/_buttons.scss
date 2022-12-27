@@ -26,40 +26,37 @@
     }
 }
 
-.like-button { // ANIMATION A AMELIORER
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-content: center;
-    overflow: hidden;
+.like-button { // ANIMATION À AMÉLIORER
     font-size: 1.5rem;
+    position: relative;
 
-    .fa-heart { 
+    &__icon { 
         padding: 1px;
-        grid-column: 1;
-        grid-row: 1;
         transition: all 300ms;
-    }
 
-    &__empty-icon {
-        opacity: 1;
-    }
+        &--empty {
+            opacity: 1;
+            position: absolute;
+            left: 0;
+        }
 
-    &__filled-icon {
-        background: linear-gradient(170deg, lighten($color-primary, 3%) 0%, lighten($color-secondary, 3%) 100%);
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-        transform: scale(0);
+        &--filled {
+            background: linear-gradient(170deg, lighten($color-primary, 3%) 0%, lighten($color-secondary, 3%) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            transform: scale(0);
+        }
     }
 
     &:hover {
         cursor: pointer;
             
-        .like-button__filled-icon {
+        .like-button__icon--filled {
             transform: scaleY(1);
         }
 
-        .like-button__empty-icon {
+        .like-button__icon--empty {
             opacity: 0;
         }
     }

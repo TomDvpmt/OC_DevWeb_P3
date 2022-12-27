@@ -1,0 +1,82 @@
+.loader {
+    flex-direction: column;
+    background: $color-background-default;
+    opacity: 0.95;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    animation: loader-container 3000ms forwards;
+
+    @keyframes loader-container {
+        90% {
+            opacity: 0.95;
+        }
+
+        99% {
+            opacity: 0;
+            transform: translateX(0);
+        }
+
+        100% {
+            opacity: 0;
+            transform: translateX(100%);
+        }
+    }
+}
+
+.loader__spinner {
+    $loader-dimension: 100px;
+    $loader-dots-number: 16;
+    $loader-dot-size: 12px;
+    $dots-animation-duration: 1000ms;
+
+    height: $loader-dimension;
+    width: $loader-dimension;
+    
+    &__dot::after {
+        content: "";
+        position: absolute;
+        height: $loader-dot-size;
+        width: $loader-dot-size;
+        border-radius: 50%;
+        background: linear-gradient(170deg, $color-secondary 0%, $color-primary 100%);
+        background-size: 1000%;
+    }
+
+    @for $i from 1 through $loader-dots-number {
+        &__dot:nth-child(#{$i})::after {
+            transform: rotate(#{$i * 360 / $loader-dots-number}deg);
+            transform-origin: $loader-dimension / 2 $loader-dimension / 2;
+
+            animation: loader-dots $dots-animation-duration backwards infinite;
+            animation-delay: $i * $dots-animation-duration / $loader-dots-number;
+
+            @keyframes loader-dots {
+                0% {
+                    background-position: 0% 0%;
+                    opacity: 0;
+                }
+
+                30% {
+                    background-position: 0% 0%;
+                    opacity: .6;
+                }
+
+                100% {
+                    background-position: 100% 100%;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+.loader__heading {
+    margin-top: 50px;
+    font-family: Shrikhand, Arial, Helvetica, sans-serif;
+}

@@ -1,3 +1,5 @@
+/***************************** COULEURS ***************************/
+
 $color-default: black;
 $color-default-light: lighten($color-default, 10%);
 $color-default-lighter: lighten($color-default, 30%);
@@ -13,6 +15,8 @@ $color-background-darker: darken($color-background-default, 20%);
 $color-background-darkest: darken($color-background-default, 70%);
 
 
+/***************************** RESPONSIVE ***************************/
+
 $breakpoints: (
     mobile: 400px,
     mobile-large: 500px,
@@ -22,5 +26,7 @@ $breakpoints: (
     desktop-large: 1440px
 );
 
+
+/***************************** ANIMATIONS ***************************/
 
 $card-animation-delay: 200ms;
