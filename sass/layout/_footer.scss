@@ -6,18 +6,69 @@
     padding: 1.5rem;
     background: $color-background-darkest;
 
-    &__brand-name {
-        display: block;
-        margin-bottom: 1rem;
-        font-family: Shrikhand, Arial, Helvetica, sans-serif;
-        font-size: 1.3rem;
+    @include tablet {
+        display: grid;
+        justify-items: center;
     }
 
-    &__notice__list__item {
+    &--home {
+        @include tablet {
+            grid-template-columns: 1fr 1fr;
+        }
+        
+        @include tablet-large {
+            grid-template-columns: $home-1st-column-percentage 1fr;
+        }
+
+        @include desktop-large {
+            grid-template-columns: 1fr #{$home-1st-column-large-px}px #{calc(1440 - $home-1st-column-large-px)}px 1fr;
+        }
+
+        .footer__list {
+            @include desktop-large {
+                grid-column: 2;
+            }
+        }
+    }
+
+    &--restaurant-page {
+        @include tablet {
+            grid-template-columns: 1fr 700px 1fr;
+            justify-items: start;
+        }
+        
+        @include desktop {
+            grid-template-columns: $restaurant-page-1st-column-percentage 1fr;
+            justify-items: center;
+        }
+
+        .footer__list {
+            @include tablet {
+                grid-column: 2;
+            }
+
+            @include desktop {
+                grid-column: 1;
+            }
+        }
+    }
+
+    &__list {
+        grid-column: 1;
+    }
+
+    &__list__item {
         grid-template-columns: 1rem 1fr;
         align-items: center;
         gap: .7rem;
         margin-bottom: .7rem;
+
+        &--heading__link {
+            display: block;
+            margin-bottom: 1rem;
+            font-family: Shrikhand, Arial, Helvetica, sans-serif;
+            font-size: 1.3rem;
+        }
 
         &--no-icon {
             grid-template-columns: 1fr;
@@ -27,12 +78,5 @@
     &__list__icon {
         font-size: .8rem;
     }
-}
-
-.footer__brand-name,
-.footer__list {
-    max-width: 405px;
-    margin-left: auto;
-    margin-right: auto;
 }
 

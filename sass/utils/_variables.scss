@@ -1,4 +1,4 @@
-/***************************** COULEURS ***************************/
+/**************************** Couleurs *************************************/
 
 $color-default: black;
 $color-default-light: lighten($color-default, 10%);
@@ -15,18 +15,22 @@ $color-background-darker: darken($color-background-default, 20%);
 $color-background-darkest: darken($color-background-default, 70%);
 
 
-/***************************** RESPONSIVE ***************************/
+
+/*************************** Breakpoints ********************************/
 
 $breakpoints: (
     mobile: 400px,
     mobile-large: 500px,
     tablet: 700px,
     tablet-large: 900px,
-    desktop: 1024px,
+    desktop: 1200px,
     desktop-large: 1440px
 );
 
 
-/***************************** ANIMATIONS ***************************/
+/******************************** Footer grid ******************************/
 
-$card-animation-delay: 200ms;
+$home-1st-column-percentage: 33.33%;
+$restaurant-page-1st-column-percentage: 40%;
+
+$home-1st-column-large-px: calc(1440 * 33.33 / 100);

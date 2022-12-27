@@ -34,7 +34,11 @@
         justify-content: center;
         column-gap: 1rem;
         align-items: center; 
-        color: $color-default-light;     
+        color: $color-default-light;
+
+        &__heading {
+            font-size: 1rem;
+        }
     }
 
     &__book  {
@@ -112,7 +116,7 @@
         @include button-pseudo-element;
         background: lighten($color-primary, 36%);
         border-radius: 1rem;
-        transition-duration: 200ms;
+        transition-duration: 150ms;
     }
 }
 

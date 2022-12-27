@@ -50,11 +50,11 @@
 
     @for $i from 1 through $loader-dots-number {
         &__dot:nth-child(#{$i})::after {
-            transform: rotate(#{$i * 360 / $loader-dots-number}deg);
-            transform-origin: $loader-dimension / 2 $loader-dimension / 2;
+            transform: rotate(#{calc($i * 360 / $loader-dots-number)}deg);
+            transform-origin: calc($loader-dimension / 2) calc($loader-dimension / 2);
 
             animation: loader-dots $dots-animation-duration backwards infinite;
-            animation-delay: $i * $dots-animation-duration / $loader-dots-number;
+            animation-delay: calc($i * $dots-animation-duration / $loader-dots-number);
 
             @keyframes loader-dots {
                 0% {

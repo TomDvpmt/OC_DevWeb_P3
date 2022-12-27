@@ -36,7 +36,7 @@
 
 .menu-section__heading,
 .menu-section__course {
-    max-width: 750px;
+    max-width: 700px;
     margin: 0 auto;
 }
 
@@ -84,7 +84,7 @@
 
     @keyframes menu-reveal {
         0% {
-            transform: translateY(100%);
+            transform: translateY(50%);
         }
 
         100% {
@@ -94,26 +94,23 @@
     }
 
     @for $i from 1 through 4 {
+        $menu-animation-delay: 200ms;
+        
         &:nth-child(#{$i}) {
-            animation-delay: $card-animation-delay * $i;
+            animation-delay: calc($menu-animation-delay * $i);
         }
     }
 
     &:hover {
         .card--restaurant-page__check {
-            width: initial; // ANIMATION A CHANGER POUR PERFORMANCES
-            padding: 0 1.2rem; // ANIMATION A CHANGER POUR PERFORMANCES
+            width: initial; // ANIMATION WIDTH => A CHANGER POUR PERFORMANCES ?
+            padding: 0 1.2rem;
             cursor: pointer;
         }
-    
+
         .card--restaurant-page__check__icon {
-            
             transform: rotate(360deg);
         }
-    } 
-
-    @include tablet-large {
-        width: 48%;
     }
 
     @include desktop {
@@ -132,7 +129,7 @@
     }
 
     &__check {
-        width: 0; // ANIMATION WIDTH => A CHANGER POUR PERFORMANCES
+        width: 0;
         background: $color-tertiary;
         align-items: center;
         transition: all 300ms;
