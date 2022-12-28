@@ -11,7 +11,7 @@
         object-fit: cover;
 
         @include desktop {
-            width: 40%;
+            width: $restaurant-page-1st-column-percentage;
             object-fit:cover;
         }
     }
@@ -26,7 +26,7 @@
         position:relative;
 
         @include desktop {
-            width: 60%;
+            width: calc(100% - $restaurant-page-1st-column-percentage);
             padding: 2rem;
             margin: 0;
             border-radius: initial;
@@ -70,46 +70,31 @@
     &__course__border-bottom {
         display: block;
         height: 3px;
-        width: 50px;
+        width: 3rem;
         margin-top: 5px;
         background: $color-tertiary;
     }
 }
 
 .card--restaurant-page {
-    transform: translateY(0);
     opacity: 0;
     animation: menu-reveal 1000ms;
     animation-fill-mode: forwards;
 
     @keyframes menu-reveal {
-        0% {
+        from {
             transform: translateY(50%);
         }
 
-        100% {
+        to {
             opacity: 1;
             transform: translateY(0);
         }
     }
 
     @for $i from 1 through 4 {
-        $menu-animation-delay: 200ms;
-        
         &:nth-child(#{$i}) {
             animation-delay: calc($menu-animation-delay * $i);
-        }
-    }
-
-    &:hover {
-        .card--restaurant-page__check {
-            width: initial; // ANIMATION WIDTH => A CHANGER POUR PERFORMANCES ?
-            padding: 0 1.2rem;
-            cursor: pointer;
-        }
-
-        .card--restaurant-page__check__icon {
-            transform: rotate(360deg);
         }
     }
 
@@ -117,9 +102,19 @@
         width: 100%;
     }
 
-    &__infos__texts__title {
-        margin-bottom: .3rem;
-        font-size: 1.2rem;
+    &__infos__texts {
+        min-width: 0; // important pour l'ellipse du texte
+
+            > * {
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+
+            &__title {
+                margin-bottom: .3rem;
+                font-size: 1.2rem;
+            }
     }
     
     &__infos__price {
@@ -136,11 +131,22 @@
 
         &__icon {
             padding: .2rem;
-            border-radius: 50%;
             overflow: hidden;
             background: white;
             color: $color-tertiary;
             transition: transform 300ms;
+        }
+    }
+
+    &:hover {
+        .card--restaurant-page__check {
+            width: initial; // ANIMATION WIDTH => A CHANGER POUR PERFORMANCES ?
+            padding: 0 1.2rem;
+            cursor: pointer;
+        }
+
+        .card--restaurant-page__check__icon {
+            transform: rotate(360deg);
         }
     }
 }

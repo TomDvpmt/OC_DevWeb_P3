@@ -5,7 +5,7 @@
     padding: 1rem 2rem;
     border: none;
     border-radius: 2rem;
-    background: linear-gradient(170deg, $color-secondary 0%, $color-primary 100%);
+    background: $color-linear-gradient;
     color: #fff;
     font-weight: 700;
     z-index: 1;
@@ -19,14 +19,14 @@
 
     &::after {
         @include button-pseudo-element;
-        background: linear-gradient(170deg, lighten($color-secondary, 3%) 0%, lighten($color-primary, 3%) 100%);
+        background: $color-linear-gradient-light;
         border-radius: 2rem;
         box-shadow: 3px 6px 10px darken($color-background-darker, 10%);
         transition-duration: 300ms;
     }
 }
 
-.like-button { // ANIMATION À AMÉLIORER
+.like-button {
     font-size: 1.5rem;
     position: relative;
 
@@ -41,7 +41,7 @@
         }
 
         &--filled {
-            background: linear-gradient(170deg, lighten($color-primary, 3%) 0%, lighten($color-secondary, 3%) 100%);
+            background: $color-linear-gradient-light;
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;

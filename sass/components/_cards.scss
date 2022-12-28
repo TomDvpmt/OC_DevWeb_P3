@@ -15,7 +15,7 @@
     width: 100%;
     justify-content: space-between;
     align-items: stretch;
-    min-width: 0;
+    min-width: 0; // important pour l'ellipse du texte
 }
 
 .card {
@@ -23,23 +23,9 @@
     border-radius: 1rem;
     overflow: hidden;
 
-    &__link {
-        width: 100%;
-    }
-
     &__infos {
         flex-grow: 1;
         padding: .6rem;
-
-        &__texts {
-            min-width: 0;
-
-            > * {
-                text-overflow: ellipsis;
-                white-space: nowrap;
-                overflow: hidden;
-            }
-        }
     }
 }
 

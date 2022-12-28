@@ -1,5 +1,5 @@
 .header--home {
-    box-shadow: 0 3px 5px $color-background-darker;
+    box-shadow: 3px 6px 10px $color-background-darker;
 }
 
 .main--home__sections-group {
@@ -11,17 +11,10 @@
         justify-content: space-between;
         align-items: stretch;
     }
-
-    @include desktop-large {
-
-    }
 }
 
-.h1--home {
-    padding-bottom: 1rem;
-}
-
-.h2--home {
+.h1--home,
+.h2--home  {
     padding-bottom: 1rem;
 }
 
@@ -34,7 +27,7 @@
         justify-content: center;
         column-gap: 1rem;
         align-items: center; 
-        color: $color-default-light;
+        color: $color-text-light;
 
         &__heading {
             font-size: 1rem;
@@ -60,7 +53,6 @@
         
         &__list {
             margin: 1.5rem 0;
-            display: flex; 
             flex-direction: column;
             align-items: center;
             row-gap: 1.5rem;
@@ -92,7 +84,6 @@
         margin-left: -2.4rem;
         padding: .3rem .6rem;
         background: $color-primary;
-        border-radius: 50%;
         color: white;
     }
 
@@ -139,7 +130,7 @@
 
     &__img {
         width: 100%;
-        height:15rem;
+        height: 15rem;
         object-fit: cover;
     }
 

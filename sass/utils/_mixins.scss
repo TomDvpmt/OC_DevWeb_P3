@@ -39,8 +39,7 @@
 
 /********************************** Animations ********************************/
 
-@mixin absolute-positionning {
-    position: absolute;
+@mixin position-zeros {
     top: 0;
     right: 0;
     bottom: 0;
@@ -48,8 +47,9 @@
 }
 
 @mixin button-pseudo-element {
-    @include absolute-positionning;
     content: "";
+    position: absolute;
+    @include position-zeros;
     opacity: 0;
     z-index: -1;
     transition-property: opacity;

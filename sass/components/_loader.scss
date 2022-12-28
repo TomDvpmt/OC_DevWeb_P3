@@ -3,10 +3,7 @@
     background: $color-background-default;
     opacity: 0.95;
     position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    @include position-zeros;
     justify-content: center;
     align-items: center;
     z-index: 999;
@@ -30,29 +27,24 @@
 }
 
 .loader__spinner {
-    $loader-dimension: 100px;
-    $loader-dots-number: 16;
-    $loader-dot-size: 12px;
-    $dots-animation-duration: 1000ms;
-
     height: $loader-dimension;
     width: $loader-dimension;
     
     &__dot::after {
         content: "";
         position: absolute;
+        border-radius: 50%;
         height: $loader-dot-size;
         width: $loader-dot-size;
-        border-radius: 50%;
-        background: linear-gradient(170deg, $color-secondary 0%, $color-primary 100%);
+        background: $color-linear-gradient;
         background-size: 1000%;
     }
 
     @for $i from 1 through $loader-dots-number {
+        
         &__dot:nth-child(#{$i})::after {
             transform: rotate(#{calc($i * 360 / $loader-dots-number)}deg);
             transform-origin: calc($loader-dimension / 2) calc($loader-dimension / 2);
-
             animation: loader-dots $dots-animation-duration backwards infinite;
             animation-delay: calc($i * $dots-animation-duration / $loader-dots-number);
 

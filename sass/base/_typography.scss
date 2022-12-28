@@ -4,20 +4,3 @@
 h1, h2, h3, h4, h5, h6, p, li, a, span {
     font-family: Roboto, Arial, Helvetica, sans-serif;
 }
-
-a {
-    color: initial;
-    text-decoration: none;
-}
-
-.light-text {
-    color: $color-default-light;
-}
-
-.lighter-text {
-    color: $color-default-lighter;
-}
-
-.lightest-text {
-    color: $color-default-lightest;
-}

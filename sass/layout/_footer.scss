@@ -21,7 +21,7 @@
         }
 
         @include desktop-large {
-            grid-template-columns: 1fr #{$home-1st-column-large-px}px #{calc(1440 - $home-1st-column-large-px)}px 1fr;
+            grid-template-columns: 1fr #{$home-1st-column-large-abs}px #{calc(1440 - $home-1st-column-large-abs)}px 1fr;
         }
 
         .footer__list {
@@ -54,29 +54,31 @@
     }
 
     &__list {
-        grid-column: 1;
-    }
-
-    &__list__item {
-        grid-template-columns: 1rem 1fr;
-        align-items: center;
-        gap: .7rem;
-        margin-bottom: .7rem;
-
-        &--heading__link {
-            display: block;
-            margin-bottom: 1rem;
-            font-family: Shrikhand, Arial, Helvetica, sans-serif;
-            font-size: 1.3rem;
+        @include tablet {
+            grid-column: 1;
         }
 
-        &--no-icon {
-            grid-template-columns: 1fr;
+        &__item {
+            display: grid;
+            grid-template-columns: 1rem 1fr;
+            align-items: center;
+            gap: .7rem;
+            margin-bottom: .7rem;
+    
+            &--heading__link {
+                display: block;
+                margin-bottom: 1rem;
+                font-family: Shrikhand, Arial, Helvetica, sans-serif;
+                font-size: 1.3rem;
+            }
+    
+            &--no-icon {
+                grid-template-columns: 1fr;
+            }
+    
+            &__icon {
+                font-size: .8rem;
+            }
         }
-    }
-
-    &__list__icon {
-        font-size: .8rem;
     }
 }
-
