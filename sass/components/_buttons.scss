@@ -1,6 +1,7 @@
 .button {
     display: block;
     position: relative;
+    z-index: 1;
     margin: 2rem auto;
     padding: 1rem 2rem;
     border: none;
@@ -8,7 +9,6 @@
     background: $color-linear-gradient;
     color: #fff;
     font-weight: 700;
-    z-index: 1;
     cursor: pointer;
 
     &:hover {
@@ -19,16 +19,16 @@
 
     &::after {
         @include button-pseudo-element;
-        background: $color-linear-gradient-light;
         border-radius: 2rem;
         box-shadow: 3px 6px 10px darken($color-background-darker, 10%);
+        background: $color-linear-gradient-light;
         transition-duration: 300ms;
     }
 }
 
 .like-button {
-    font-size: 1.5rem;
     position: relative;
+    font-size: 1.5rem;
 
     &__icon { 
         padding: 1px;
@@ -51,7 +51,7 @@
 
     &:hover {
         cursor: pointer;
-            
+
         .like-button__icon--filled {
             transform: scaleY(1);
         }

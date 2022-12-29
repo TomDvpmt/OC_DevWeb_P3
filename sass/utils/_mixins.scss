@@ -1,37 +1,7 @@
 /****************************** Media queries *******************************/
 
-@mixin mobile {
-    @media screen and (min-width: map-get($breakpoints, mobile)) {
-        @content;
-    }
-}
-
-@mixin mobile-large {
-    @media screen and (min-width: map-get($breakpoints, mobile-large)) {
-        @content;
-    }
-}
-
-@mixin tablet {
-    @media screen and (min-width: map-get($breakpoints, tablet)) {
-        @content;
-    }
-}
-
-@mixin tablet-large {
-    @media screen and (min-width: map-get($breakpoints, tablet-large)) {
-        @content;
-    }
-}
-
-@mixin desktop {
-    @media screen and (min-width: map-get($breakpoints, desktop)) {
-        @content;
-    }
-}
-
-@mixin desktop-large {
-    @media screen and (min-width: map-get($breakpoints, desktop-large)) {
+@mixin responsive($screen-type) {
+    @media screen and (min-width: map-get($breakpoints, $screen-type)) {
         @content;
     }
 }

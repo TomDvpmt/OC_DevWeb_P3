@@ -1,22 +1,20 @@
 .main--restaurant-page {
     background: white;
 
-    @include desktop {
+    @include responsive(desktop) {
         display: flex;
         justify-content: space-between;
     }
 
     &__img {
-        width: 100%;
-        object-fit: cover;
+        max-width: 100%;
 
-        @include desktop {
+        @include responsive(desktop) {
             width: $restaurant-page-1st-column-percentage;
-            object-fit:cover;
         }
     }
     
-    &__menu-section {
+    &__menu {
         margin: -4rem auto 0 auto;
         padding: 2rem .8rem;
         background-color: $color-background-default;
@@ -25,7 +23,7 @@
         z-index: 2;
         position:relative;
 
-        @include desktop {
+        @include responsive(desktop) {
             width: calc(100% - $restaurant-page-1st-column-percentage);
             padding: 2rem;
             margin: 0;
@@ -76,6 +74,10 @@
     }
 }
 
+.cards--restaurant-page {
+    row-gap: 1rem;
+}
+
 .card--restaurant-page {
     opacity: 0;
     animation: menu-reveal 1000ms;
@@ -96,10 +98,6 @@
         &:nth-child(#{$i}) {
             animation-delay: calc($menu-animation-delay * $i);
         }
-    }
-
-    @include desktop {
-        width: 100%;
     }
 
     &__infos__texts {

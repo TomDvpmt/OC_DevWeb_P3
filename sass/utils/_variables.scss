@@ -15,27 +15,24 @@ $color-background-darker: darken($color-background-default, 20%);
 $color-background-darkest: darken($color-background-default, 70%);
 
 $color-linear-gradient: linear-gradient(170deg, $color-secondary 0%, $color-primary 100%);
-$color-linear-gradient-light: linear-gradient(170deg, lighten($color-secondary, 3%) 0%, lighten($color-primary, 3%) 100%);;
+$color-linear-gradient-light: linear-gradient(170deg, lighten($color-secondary, 3%) 0%, lighten($color-primary, 3%) 100%);
 
 
 /*************************** Breakpoints ****************************/
 
 $breakpoints: (
-    mobile: 400px,
-    mobile-large: 500px,
     tablet: 700px,
-    tablet-large: 900px,
+    tablet-large: 950px,
     desktop: 1200px,
     desktop-large: 1440px
 );
 
-/******************* Largeurs de colonnes (desktop) ******************/
+/******************* Largeurs de colonnes (tablet-large et +) ******************/
 
 $home-1st-column-percentage: 33.33%;
+$home-1st-column-px: #{calc(1440 * 33.33 / 100)}px;
+
 $restaurant-page-1st-column-percentage: 40%;
-
-$home-1st-column-large-abs: calc(1440 * 33.33 / 100);
-
 
 
 /*********************** Animations ******************************/
@@ -51,4 +48,3 @@ $dots-animation-duration: 1000ms;
 // Menu (page restaurant)
 
 $menu-animation-delay: 200ms;
-

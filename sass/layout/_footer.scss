@@ -6,55 +6,55 @@
     padding: 1.5rem;
     background: $color-background-darkest;
 
-    @include tablet {
+    @include responsive(tablet) {
         display: grid;
         justify-items: center;
     }
 
     &--home {
-        @include tablet {
+        @include responsive(tablet) {
             grid-template-columns: 1fr 1fr;
         }
         
-        @include tablet-large {
+        @include responsive(tablet-large) {
             grid-template-columns: $home-1st-column-percentage 1fr;
         }
 
-        @include desktop-large {
-            grid-template-columns: 1fr #{$home-1st-column-large-abs}px #{calc(1440 - $home-1st-column-large-abs)}px 1fr;
+        @include responsive(desktop-large) {
+            grid-template-columns: 1fr $home-1st-column-px calc(1440px - $home-1st-column-px) 1fr;
         }
 
         .footer__list {
-            @include desktop-large {
+            @include responsive(desktop-large) {
                 grid-column: 2;
             }
         }
     }
 
     &--restaurant-page {
-        @include tablet {
+        @include responsive(tablet) {
             grid-template-columns: 1fr 700px 1fr;
             justify-items: start;
         }
         
-        @include desktop {
+        @include responsive(desktop) {
             grid-template-columns: $restaurant-page-1st-column-percentage 1fr;
             justify-items: center;
         }
 
         .footer__list {
-            @include tablet {
+            @include responsive(tablet) {
                 grid-column: 2;
             }
 
-            @include desktop {
+            @include responsive(desktop) {
                 grid-column: 1;
             }
         }
     }
 
     &__list {
-        @include tablet {
+        @include responsive(tablet) {
             grid-column: 1;
         }
 

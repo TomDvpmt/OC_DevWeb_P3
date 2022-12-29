@@ -6,29 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../public/css/style.css">
     <script src="https://kit.fontawesome.com/81b6c8a65c.js" crossorigin="anonymous"></script>
-    <title>À la française</title>
+    <title>Ohmyfood &#8211; À la française</title>
 </head>
-<body class="a_la_francaise">
-    <header class="header flex flex">
-        <a class="header__arrow_link" href="../index.html">
-            <i class="fa-solid fa-arrow-left header__arrow-left"></i>
+<body>
+    <header class="header flex">
+        <a class="header__arrow-link" href="../index.html">
+            <i class="fa-solid fa-arrow-left"></i>
         </a>
         <img class="header__logo" src="../public/img/logo/ohmyfood@2x.svg" alt="logo Ohmyfood">
     </header>
     <main class="main main--restaurant-page">
         <img class="main--restaurant-page__img" src="../public/img/restaurants/a_la_francaise.jpg" alt="restaurant À la française">
-        <section class="main--restaurant-page__menu-section">
-            <div class="menu-section__heading flex">
+        <div class="main--restaurant-page__menu">
+            <section class="menu-section__heading flex">
                 <h1 class="menu-section__heading__title">À la française</h1>
                 <div class="like-button menu-section__like-button">
                     <i class="fa-regular fa-heart like-button__icon like-button__icon--empty"></i>
                     <i class="fa-solid fa-heart like-button__icon like-button__icon--filled"></i>
                 </div>
-            </div>
-            <div class="menu-section__course">
+            </section>
+            <section class="menu-section__course">
                 <h2 class="menu-section__course__type lighter-text">Entrées</h2>
                 <div class="menu-section__course__border-bottom"></div>
-                <div class="cards flex">                    
+                <div class="cards cards--restaurant-page flex">                    
                     <article class="card card--restaurant-page flex box-shadow">
                         <div class="card__infos flex">
                             <div class="card__infos__texts card--restaurant-page__infos__texts">
@@ -66,11 +66,11 @@
                         </div>
                     </article>
                 </div>
-            </div>
-            <div class="menu-section__course">
+            </section>
+            <section class="menu-section__course">
                 <h2 class="menu-section__course__type lighter-text">Plats</h2>
                 <div class="menu-section__course__border-bottom"></div>
-                <div class="cards flex">
+                <div class="cards cards--restaurant-page flex">
                     <article class="card card--restaurant-page flex box-shadow">
                         <div class="card__infos flex">
                             <div class="card__infos__texts card--restaurant-page__infos__texts">
@@ -108,11 +108,11 @@
                         </div>
                     </article>
                 </div>
-            </div>
-            <div class="menu-section__course">
+            </section>
+            <section class="menu-section__course">
                 <h2 class="menu-section__course__type lighter-text">Desserts</h2>
                 <div class="menu-section__course__border-bottom"></div>
-                <div class="cards flex">
+                <div class="cards cards--restaurant-page flex">
                     <article class="card card--restaurant-page flex box-shadow">
                         <div class="card__infos flex">
                             <div class="card__infos__texts card--restaurant-page__infos__texts">
@@ -150,9 +150,9 @@
                         </div>
                     </article>
                 </div>
-            </div>
-            <button class="button menu-section__order-button box-shadow">Commander</button>
-        </section>
+            </section>
+            <button class="button box-shadow">Commander</button>
+        </div>
     </main>
     <footer class="footer footer--restaurant-page">
         <ul class="footer__list">

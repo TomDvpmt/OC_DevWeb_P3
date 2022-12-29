@@ -1,13 +1,13 @@
-* {
-    box-sizing: border-box;
+:root {
+    font-size: 87.5%;
+
+    @include responsive(tablet) {
+        font-size: 100%;
+    }
 }
 
-:root {
-    font-size: 14px;
-
-    @include mobile {
-        font-size: 16px;
-    }
+* {
+    box-sizing: border-box;
 }
 
 body, h1, h2, h3, h4, h5, h6, p, ul {
@@ -22,6 +22,10 @@ a {
 ul {
     list-style: none;
     padding-inline-start: 0;
+}
+
+img {
+    object-fit: cover;
 }
 
 .flex {
