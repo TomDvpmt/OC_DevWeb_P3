@@ -4,14 +4,21 @@
     @include responsive(desktop) {
         display: flex;
         justify-content: space-between;
+        align-items: stretch;
+    }
+
+    &__img-container {
+        max-height: 700px;
+
+        @include responsive(desktop) {
+            width: $restaurant-page-1st-column-percentage;
+            max-height: initial;
+        }
     }
 
     &__img {
         max-width: 100%;
-
-        @include responsive(desktop) {
-            width: $restaurant-page-1st-column-percentage;
-        }
+        height: 100%;
     }
 
     &__menu {
