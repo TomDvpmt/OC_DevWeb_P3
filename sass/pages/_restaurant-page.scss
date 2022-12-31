@@ -13,7 +13,7 @@
             width: $restaurant-page-1st-column-percentage;
         }
     }
-    
+
     &__menu {
         margin: -4rem auto 0 auto;
         padding: 2rem .8rem;
@@ -122,24 +122,25 @@
     }
 
     &__check {
-        width: 0;
+        margin-right: -3.8rem;
+        padding: 0 1.2rem;
         background: $color-tertiary;
         align-items: center;
-        transition: all 300ms;
+        transition: margin-right 300ms;
 
         &__icon {
             padding: .2rem;
             overflow: hidden;
             background: white;
             color: $color-tertiary;
-            transition: transform 300ms;
+            transition: transform 300ms 100ms;
         }
     }
 
     &:hover {
         .card--restaurant-page__check {
-            width: initial; // ANIMATION WIDTH => A CHANGER POUR PERFORMANCES ?
-            padding: 0 1.2rem;
+            margin-right: 0;
+            
             cursor: pointer;
         }
 

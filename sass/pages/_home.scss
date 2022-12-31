@@ -41,7 +41,6 @@
 
     &__notice {
         background-color: #fff;
-        position: relative;
 
         @include responsive(tablet-large) {
             flex-basis: $home-1st-column-percentage;

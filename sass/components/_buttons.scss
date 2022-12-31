@@ -11,18 +11,18 @@
     font-weight: 700;
     cursor: pointer;
 
-    &:hover {
-        &::after {
-            opacity: 1;
-        }
-    }
-
     &::after {
         @include button-pseudo-element;
         border-radius: 2rem;
         box-shadow: 3px 6px 10px darken($color-background-darker, 10%);
         background: $color-linear-gradient-light;
-        transition-duration: 300ms;
+        transition: opacity 300ms;
+    }
+
+    &:hover {
+        &::after {
+            opacity: 1;
+        }
     }
 }
 
