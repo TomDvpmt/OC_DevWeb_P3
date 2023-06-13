@@ -8,7 +8,7 @@
     }
 
     &__img-container {
-        max-height: 700px;
+        max-height: 80vh;
 
         @include responsive(desktop) {
             width: $restaurant-page-1st-column-percentage;
@@ -23,12 +23,12 @@
 
     &__menu {
         margin: -4rem auto 0 auto;
-        padding: 2rem .8rem;
+        padding: 2rem 0.8rem;
         background-color: $color-background-default;
         border-radius: 2rem 2rem 0 0;
         overflow: hidden;
         z-index: 2;
-        position:relative;
+        position: relative;
 
         @include responsive(desktop) {
             width: calc(100% - $restaurant-page-1st-column-percentage);
@@ -51,14 +51,18 @@
         align-items: center;
 
         &__title {
-            font-size: 2rem;
+            font-size: 1.7rem;
             font-family: Shrikhand, Arial, Helvetica, sans-serif;
             font-weight: normal;
+
+            @include responsive(tablet) {
+                font-size: 2rem;
+            }
         }
     }
 
     &__like-button {
-        margin-right: 1rem;
+        margin: 0 1rem;
 
         &:hover {
             cursor: pointer;
@@ -108,20 +112,20 @@
     }
 
     &__infos__texts {
-        min-width: 0; // important pour l'ellipse du texte
+        min-width: 0; // important pour l'ellipse du texte dans le contexte d'une flexbox
 
-            > * {
-                text-overflow: ellipsis;
-                white-space: nowrap;
-                overflow: hidden;
-            }
+        > * {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
 
-            &__title {
-                margin-bottom: .3rem;
-                font-size: 1.2rem;
-            }
+        &__title {
+            margin-bottom: 0.3rem;
+            font-size: 1.2rem;
+        }
     }
-    
+
     &__infos__price {
         margin-left: 5px;
         align-self: flex-end;
@@ -136,7 +140,7 @@
         transition: margin-right 300ms;
 
         &__icon {
-            padding: .2rem;
+            padding: 0.2rem;
             overflow: hidden;
             background: white;
             color: $color-tertiary;
@@ -147,7 +151,7 @@
     &:hover {
         .card--restaurant-page__check {
             margin-right: 0;
-            
+
             cursor: pointer;
         }
 
@@ -156,4 +160,3 @@
         }
     }
 }
-

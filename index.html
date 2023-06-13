@@ -1,158 +1,234 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./public/css/style.css">
-    <script src="https://kit.fontawesome.com/81b6c8a65c.js" crossorigin="anonymous"></script>
-    <title>Ohmyfood</title>
-</head>
-<body>
-    <div class="loader flex">
-        <div class="loader__spinner">
-            <span class="loader__spinner__dot"></span>
-            <span class="loader__spinner__dot"></span>
-            <span class="loader__spinner__dot"></span>
-            <span class="loader__spinner__dot"></span>
-            <span class="loader__spinner__dot"></span>
-            <span class="loader__spinner__dot"></span>
-            <span class="loader__spinner__dot"></span>
-            <span class="loader__spinner__dot"></span>
-            <span class="loader__spinner__dot"></span>
-            <span class="loader__spinner__dot"></span>
-            <span class="loader__spinner__dot"></span>
-            <span class="loader__spinner__dot"></span>
-            <span class="loader__spinner__dot"></span>
-            <span class="loader__spinner__dot"></span>
-            <span class="loader__spinner__dot"></span>
-            <span class="loader__spinner__dot"></span>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./public/css/style.css" />
+        <script
+            src="https://kit.fontawesome.com/81b6c8a65c.js"
+            crossorigin="anonymous"></script>
+        <title>Ohmyfood</title>
+    </head>
+    <body>
+        <div class="loader flex">
+            <div class="loader__spinner">
+                <span class="loader__spinner__dot"></span>
+                <span class="loader__spinner__dot"></span>
+                <span class="loader__spinner__dot"></span>
+                <span class="loader__spinner__dot"></span>
+                <span class="loader__spinner__dot"></span>
+                <span class="loader__spinner__dot"></span>
+                <span class="loader__spinner__dot"></span>
+                <span class="loader__spinner__dot"></span>
+                <span class="loader__spinner__dot"></span>
+                <span class="loader__spinner__dot"></span>
+                <span class="loader__spinner__dot"></span>
+                <span class="loader__spinner__dot"></span>
+                <span class="loader__spinner__dot"></span>
+                <span class="loader__spinner__dot"></span>
+                <span class="loader__spinner__dot"></span>
+                <span class="loader__spinner__dot"></span>
+            </div>
+            <p class="loader__heading">Chargement...</p>
         </div>
-        <p class="loader__heading">Chargement...</p>
-    </div>
-    <header class="header header--home flex">
-        <img class="header__logo" src="public/img/logo/ohmyfood@2x.svg" alt="logo Ohmyfood">
-    </header>
-    <main class="main main--home">
-        <section class="section section--home section--home__location flex">
-            <i class="fa-solid fa-location-dot lighter-text"></i>
-            <h2 class="section--home__location__heading lighter-text">Paris, Belleville</h2>
-        </section>
-        <section class="section section--home section--home__book">
-            <h1 class="h1--home">Réservez le menu qui vous convient</h1>
-            <p class="lighter-text">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-            <button class="button box-shadow">Explorer nos restaurants</button>
-        </section>
-        <div class="main--home__sections-group">
-            <section class="section section--home section--home__notice">
-                <div class="sticky-div">
-                    <h2 class="h2--home">Fonctionnement</h2>
-                    <ul class="section--home__notice__list flex">
-                        <li class="notice__list__item flex box-shadow">
-                            <span class="notice__list__item__number round">1</span>
-                            <i class="fa-solid fa-mobile-screen-button notice__list__item__icon lightest-text"></i>
-                            <span class="notice__list__item__text">Choisissez un restaurant</span>
-                        </li>
-                        <li class="notice__list__item flex box-shadow">
-                            <span class="notice__list__item__number round">2</span>
-                            <i class="fa-solid fa-list-ul notice__list__item__icon lightest-text"></i>
-                            <span class="notice__list__item__text">Composez votre menu</span>
-                        </li>
-                        <li class="notice__list__item flex box-shadow">
-                            <span class="notice__list__item__number round">3</span>
-                            <i class="fa-solid fa-store notice__list__item__icon lightest-text"></i>
-                            <span class="notice__list__item__text">Dégustez au restaurant</span>
-                        </li>
-                    </ul>
-                </div>
+        <header class="header header--home flex">
+            <img
+                class="header__logo"
+                src="public/img/logo/ohmyfood@2x.svg"
+                alt="logo Ohmyfood" />
+        </header>
+        <main class="main main--home">
+            <section class="section section--home section--home__location flex">
+                <i class="fa-solid fa-location-dot lighter-text"></i>
+                <h2 class="section--home__location__heading lighter-text">
+                    Paris, Belleville
+                </h2>
             </section>
-            <section class="section section--home section--home__restaurants">
-                <h2 class="h2--home">Restaurants</h2>
-                <div class="cards cards--home flex">
-                    <article class="card card--home flex box-shadow">
-                        <a href="./pages/la_palette_du_gout.html" class="card__link">
-                            <img class="card--home__img" src="./public/img/restaurants/la_palette_du_gout.jpg" alt="resturant La palette du goût">
-                            <p class="card--home__new">Nouveau</p>
-                            <div class="card__infos flex">
-                                <div class="card__infos__texts">
-                                    <h3>La palette du goût</h3>
-                                    <p class="lighter-text">Ménilmontant</p>
-                                </div>
-                                <div class="like-button">
-                                    <i class="fa-solid fa-heart like-button__icon like-button__icon--filled"></i>
-                                    <i class="fa-regular fa-heart like-button__icon like-button__icon--empty"></i>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-                    <article class="card card--home flex box-shadow">
-                        <a href="./pages/la_note_enchantee.html" class="card__link">
-                            <img class="card--home__img" src="./public/img/restaurants/la_note_enchantee.jpg" alt="restaurant La note enchantée">
-                            <p class="card--home__new">Nouveau</p>
-                            <div class="card__infos flex">
-                                <div class="card__infos__texts">
-                                    <h3>La note enchantée</h3>
-                                    <p class="lighter-text">Charonne</p>
-                                </div>
-                                <div class="like-button">
-                                    <i class="fa-solid fa-heart like-button__icon like-button__icon--filled"></i>
-                                    <i class="fa-regular fa-heart like-button__icon like-button__icon--empty"></i>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-                    <article class="card card--home flex box-shadow">
-                        <a href="./pages/a_la_francaise.html" class="card__link">
-                            <img class="card--home__img" src="./public/img/restaurants/a_la_francaise.jpg" alt="restaurant À la française">
-                            <div class="card__infos flex">
-                                <div class="card__infos__texts">
-                                    <h3>À la française</h3>
-                                    <p class="lighter-text">Cité rouge</p>
-                                </div>
-                                <div class="like-button">
-                                    <i class="fa-solid fa-heart like-button__icon like-button__icon--filled"></i>
-                                    <i class="fa-regular fa-heart like-button__icon like-button__icon--empty"></i>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-                    <article class="card card--home flex box-shadow">
-                        <a href="./pages/le_delice_des_sens.html" class="card__link">
-                            <img class="card--home__img" src="./public/img/restaurants/le_delice_des_sens.jpg" alt="restaurant Le délice des sens">
-                            <div class="card__infos flex">
-                                <div class="card__infos__texts">
-                                    <h3>Le délice des sens</h3>
-                                    <p class="lighter-text">Folie-Méricourt</p>
-                                </div>
-                                <div class="like-button">
-                                    <i class="fa-solid fa-heart like-button__icon like-button__icon--filled"></i>
-                                    <i class="fa-regular fa-heart like-button__icon like-button__icon--empty"></i>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-                </div>
+            <section class="section section--home section--home__book">
+                <h1 class="h1--home">Réservez le menu qui vous convient</h1>
+                <p class="lighter-text">
+                    Découvrez des restaurants d'exception, sélectionnés par nos
+                    soins.
+                </p>
+                <button class="button box-shadow">
+                    Explorer nos restaurants
+                </button>
             </section>
-        </div>
-    </main>
-    <footer class="footer footer--home">
-        <ul class="footer__list">
-            <li class="footer__list__item footer__list__item--heading">
-                <a class="footer__list__item--heading__link" href="../index.html">ohmyfood</a>
-            </li>
-            <li class="footer__list__item">
-                <i class="fa-solid fa-utensils footer__list__item__icon"></i>
-                <span>Proposer un restaurant</span>
-            </li>
-            <li class="footer__list__item">
-                <i class="fa-solid fa-handshake-angle footer__list__item__icon"></i>
-                <span>Devenir partenaire</span>
-            </li>
-            <li class="footer__list__item footer__list__item--no-icon">Mentions légales</li>
-            <li class="footer__list__item footer__list__item--no-icon">
-                <a href="mailto:contact@ohmyfood.oc">Contact</a>
-            </li>
-        </ul>
-    </footer>
-</body>
+            <div class="main--home__sections-group">
+                <div class="main--home__sections-group__container">
+                    <section
+                        class="section section--home section--home__notice">
+                        <div class="sticky-div">
+                            <h2 class="h2--home">Fonctionnement</h2>
+                            <ul class="section--home__notice__list flex">
+                                <li class="notice__list__item flex box-shadow">
+                                    <span
+                                        class="notice__list__item__number round"
+                                        >1</span
+                                    >
+                                    <i
+                                        class="fa-solid fa-mobile-screen-button notice__list__item__icon lightest-text"></i>
+                                    <span class="notice__list__item__text"
+                                        >Choisissez un restaurant</span
+                                    >
+                                </li>
+                                <li class="notice__list__item flex box-shadow">
+                                    <span
+                                        class="notice__list__item__number round"
+                                        >2</span
+                                    >
+                                    <i
+                                        class="fa-solid fa-list-ul notice__list__item__icon lightest-text"></i>
+                                    <span class="notice__list__item__text"
+                                        >Composez votre menu</span
+                                    >
+                                </li>
+                                <li class="notice__list__item flex box-shadow">
+                                    <span
+                                        class="notice__list__item__number round"
+                                        >3</span
+                                    >
+                                    <i
+                                        class="fa-solid fa-store notice__list__item__icon lightest-text"></i>
+                                    <span class="notice__list__item__text"
+                                        >Dégustez au restaurant</span
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section
+                        class="section section--home section--home__restaurants">
+                        <h2 class="h2--home">Restaurants</h2>
+                        <div class="cards cards--home flex">
+                            <article class="card card--home flex box-shadow">
+                                <a
+                                    href="./pages/la_palette_du_gout.html"
+                                    class="card__link">
+                                    <img
+                                        class="card--home__img"
+                                        src="./public/img/restaurants/la_palette_du_gout.jpg"
+                                        alt="resturant La palette du goût" />
+                                    <p class="card--home__new">Nouveau</p>
+                                    <div class="card__infos flex">
+                                        <div class="card__infos__texts">
+                                            <h3>La palette du goût</h3>
+                                            <p class="lighter-text">
+                                                Ménilmontant
+                                            </p>
+                                        </div>
+                                        <div class="like-button">
+                                            <i
+                                                class="fa-solid fa-heart like-button__icon like-button__icon--filled"></i>
+                                            <i
+                                                class="fa-regular fa-heart like-button__icon like-button__icon--empty"></i>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
+                            <article class="card card--home flex box-shadow">
+                                <a
+                                    href="./pages/la_note_enchantee.html"
+                                    class="card__link">
+                                    <img
+                                        class="card--home__img"
+                                        src="./public/img/restaurants/la_note_enchantee.jpg"
+                                        alt="restaurant La note enchantée" />
+                                    <p class="card--home__new">Nouveau</p>
+                                    <div class="card__infos flex">
+                                        <div class="card__infos__texts">
+                                            <h3>La note enchantée</h3>
+                                            <p class="lighter-text">Charonne</p>
+                                        </div>
+                                        <div class="like-button">
+                                            <i
+                                                class="fa-solid fa-heart like-button__icon like-button__icon--filled"></i>
+                                            <i
+                                                class="fa-regular fa-heart like-button__icon like-button__icon--empty"></i>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
+                            <article class="card card--home flex box-shadow">
+                                <a
+                                    href="./pages/a_la_francaise.html"
+                                    class="card__link">
+                                    <img
+                                        class="card--home__img"
+                                        src="./public/img/restaurants/a_la_francaise.jpg"
+                                        alt="restaurant À la française" />
+                                    <div class="card__infos flex">
+                                        <div class="card__infos__texts">
+                                            <h3>À la française</h3>
+                                            <p class="lighter-text">
+                                                Cité rouge
+                                            </p>
+                                        </div>
+                                        <div class="like-button">
+                                            <i
+                                                class="fa-solid fa-heart like-button__icon like-button__icon--filled"></i>
+                                            <i
+                                                class="fa-regular fa-heart like-button__icon like-button__icon--empty"></i>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
+                            <article class="card card--home flex box-shadow">
+                                <a
+                                    href="./pages/le_delice_des_sens.html"
+                                    class="card__link">
+                                    <img
+                                        class="card--home__img"
+                                        src="./public/img/restaurants/le_delice_des_sens.jpg"
+                                        alt="restaurant Le délice des sens" />
+                                    <div class="card__infos flex">
+                                        <div class="card__infos__texts">
+                                            <h3>Le délice des sens</h3>
+                                            <p class="lighter-text">
+                                                Folie-Méricourt
+                                            </p>
+                                        </div>
+                                        <div class="like-button">
+                                            <i
+                                                class="fa-solid fa-heart like-button__icon like-button__icon--filled"></i>
+                                            <i
+                                                class="fa-regular fa-heart like-button__icon like-button__icon--empty"></i>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+        <footer class="footer footer--home">
+            <ul class="footer__list">
+                <li class="footer__list__item footer__list__item--heading">
+                    <a
+                        class="footer__list__item--heading__link"
+                        href="../index.html"
+                        >ohmyfood</a
+                    >
+                </li>
+                <li class="footer__list__item">
+                    <i
+                        class="fa-solid fa-utensils footer__list__item__icon"></i>
+                    <span>Proposer un restaurant</span>
+                </li>
+                <li class="footer__list__item">
+                    <i
+                        class="fa-solid fa-handshake-angle footer__list__item__icon"></i>
+                    <span>Devenir partenaire</span>
+                </li>
+                <li class="footer__list__item footer__list__item--no-icon">
+                    Mentions légales
+                </li>
+                <li class="footer__list__item footer__list__item--no-icon">
+                    <a href="mailto:contact@ohmyfood.oc">Contact</a>
+                </li>
+            </ul>
+        </footer>
+    </body>
 </html>
